@@ -1,0 +1,420 @@
+/* Global Styling */
+
+* {margin: 0;   padding: 0;}
+/* Cancel address styling */
+address {all: unset;}
+
+:root {
+    /* Color Palette */
+    --c1: #D8BC69;
+    --c2: #BF9D39;
+    --c3: #1E1E20;
+    --c4: #FFFFFF;
+}
+
+.grid {display: grid;}
+.flex {display: flex;}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px
+}
+
+/* Fonts */
+h1, h2, h3  {font-family: 'Lato', Arial, Helvetica, sans-serif;}
+h1 {font-size: 80px;    line-height: 1.05;}
+h2 {font-size: 30px;    line-height: 1.1;}
+h3 {font-size: 24px;    line-height: 1.1;}
+p           {font-family: 'Roboto', Arial, Helvetica, sans-serif; font-size: 18px; line-height: 1.6;}
+/* Small paragraph */
+.small-p    {font-size: 14px;   line-height: 1.6;}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('./Assets/Fonts/Lato/Lato-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('./Assets/Fonts/Roboto/Roboto-VariableFont_wdth\,wght.ttf') format('truetype');
+}
+
+/* Mobile screen Font Sizes */
+@media only screen and (max-width: 650px) {
+    h1 {font-size: 55px;}
+    h2 {font-size: 30px;}
+    h3 {font-size: 24px;}
+}
+
+
+/* Header */
+
+
+
+/* Header layout */
+.head-layout {
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+}
+
+.head-logo {
+    width: 200px;
+    height: auto;
+}
+
+.head-logo:hover {
+    cursor: pointer;
+}
+
+/* Navigation */
+.page-nav ul {
+    list-style: none;
+}
+.page-nav li {
+    margin: 1rem;
+}
+.page-nav a {
+    text-decoration: none;
+    color: var(--c3);
+    font-weight: bold;
+    padding-bottom: 3px;
+}
+
+.page-nav a[aria-current="page"]        {border-bottom: 2px solid var(--c1);}
+/* .page-nav a[aria-current="page-bottom"]     {border-bottom: 2px solid var(--c4);} */
+
+.page-nav a:hover {border-bottom: 2px solid var(--c2);}
+
+
+/* Navigation Burgermenu */
+#menu-toggle-top, #menu-toggle-bottom {display: none;}
+.menu-icon {
+    display: none;
+    align-self: center;
+    font-size: 2.4rem;
+    color: var(--c1);
+    cursor: pointer;
+}
+
+.menu-icon:hover {color: var(--c2);}
+
+/* Initially had footer burgermenu as well */
+@media only screen and (max-width: 650px) {
+    .nav-box.top    {flex-direction: column;            position: relative;}
+    /* .nav-box.bottom {flex-direction: column-reverse;    position: relative;} */
+    .menu-icon {
+        display: block;
+    }
+    /* Initially no ".top" */
+    .page-nav.top {
+        height: 0;
+        width: 100px;
+        overflow: hidden;
+        position: absolute;
+        transition: height 0.4s ease-in-out;
+    }
+    .page-nav.top       {top: 50px; right: 0px;}
+    /* .page-nav.bottom    {bottom: 50px; right: 0px;} */
+    /* Initially no ".top" */
+    .page-nav.top ul {flex-direction: column;}
+    .page-nav.top ul    {background-color: var(--c4);}
+    /* .page-nav.bottom ul {background-color: var(--c1);} */
+    #menu-toggle-top:checked ~ .page-nav.top        {height: 150px;}
+    /* #menu-toggle-bottom:checked ~ .page-nav.bottom  {height: 150px;} */
+}
+
+
+
+/* Main */
+
+
+
+/* Page Cover */
+.cover-box {
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-size: cover;
+    height: 350px;
+}
+
+.cover-box.home-page        {background-image: url(./Assets/Fotos/Image-6.jpg);}
+.cover-box.over-ons-page    {background-image: url(./Assets/Fotos/Image-4.jpg);}
+.cover-box.contact-page     {background-image: url(./Assets/Fotos/Image-3.jpg);}
+
+.cover-title {color: var(--c4);}
+
+/* Page Content */
+
+.main-content-box > div {margin-top: 7.5%;   gap: 15px; color: var(--c3);}
+
+
+    /* Home Page */
+
+
+    /* Declared margin-top over every p. Used !important to overrule but will do this better next time */
+.main-content-box p     {margin-top: 15px;}
+
+.main-content-box div.img   {
+    background-size: cover;
+    background-position: center;
+    flex-shrink: 0;
+    width: 450px;   
+    height: 300px;
+}
+
+.home-over-ons .img {background-image: url(./Assets/Fotos/Image-4.jpg);}
+.home-contact .img  {background-image: url(./Assets/Fotos/Image-2.jpg);}
+
+        /* Buttons */
+.main-content-box button, .form-submit-button {
+    background-color: var(--c1);
+    color: var(--c3);
+    margin-top: 20px;
+    width: 115px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.2);
+    /* transition: background-color 0.2s ease-in-out; */
+}
+        /* Button Hover */
+button:hover, .form-submit-button:hover {
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.3);
+    background-color: var(--c2);
+    cursor: pointer;
+}
+
+
+    /* Over ons Page */
+
+
+.page2-p-img {
+    background-image: url(./Assets/Fotos/Image-5.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 95%;
+    height: 260px;
+    margin: 25px auto 65px;
+    border: 1px solid var(--c3);
+}
+
+        /* Employees */
+
+.page2-employees {
+    justify-content: space-around; 
+}
+
+            /* Employee Box Layout */
+
+.employee-layout {
+    border: 4px solid var(--c1);
+    border-radius: 2px;
+    width: 330px;
+    height: 680px;
+    padding: 30px;
+}
+
+.employee-layout > * {
+    margin-top: 10px;
+}
+
+            /* Profile Pictures */
+
+.profile-picture {
+    background-size: cover;
+    background-position: center;
+    margin-top: 0;
+    width: 100%;
+    height: 400px;
+}
+
+.emp1 .profile-picture {background-image: url(./Assets/Fotos/Image-1.jpg);}
+.emp2 .profile-picture {background-image: url(./Assets/Fotos/profile2.jpg);}
+
+.function {
+    margin-top: 8px !important;
+}
+
+            /* Social Media */
+            
+.social-media {
+    width: 100%;
+    height: 40px;
+}
+
+.social-media > * {
+    background-position: center;
+    background-size: cover;
+    margin-right: 10px;
+    height: 100%;
+    width: 40px;
+    color: var(--c1);
+}
+
+.social-media .a {background-image: url(./Assets/Icons/instagram.png);}
+.social-media .b {background-image: url(./Assets/Icons/facebook.png);}
+.social-media .c {background-image: url(./Assets/Icons/twitter.png);}
+.social-media .d {background-image: url(./Assets/Icons/linkedin.png);}
+
+@media only screen and (max-width: 650px) {
+    /* Stacks Employees vertically */
+    .page2-employees {
+        flex-wrap: wrap;
+    }
+    /* Hides third p in over-ons section */
+    .big-screen-only {
+        display: none;
+    }
+    /* Increases gap between Employees */
+    .emp2 {
+        margin-top: 22px;
+    }
+}
+
+
+    /* Contact Page */
+
+
+        /* Hier kunt u ons vinden! */
+.page3-contact-box {
+    height: 550px;
+}
+
+/* .page3-contact-box * {border: 1px solid red;} */
+
+.page3-contact-info {
+    height: 100%;
+    width: 40%;
+}
+
+.page3-contact-info h2 {
+    border-bottom: 1px solid var(--c1);
+    padding-bottom: 10px;
+    width: max(210px, 66%);
+}
+
+.page3-contact-info address {
+    flex-direction: column;
+    justify-content: space-around;
+    height: 90%;
+}
+
+.page3-contact-info address p {
+    margin: 0;
+}
+
+.contact-days-layout {
+    grid-template: repeat(7, 1fr) / 1fr 1fr;
+    width: 200px;
+}
+
+.contact-days-layout p {
+    margin-top: 5px !important;
+    line-height: 1;
+}
+
+.contact-days-layout p:nth-child(odd) {
+    border-right: 1px solid var(--c1);
+    margin-right: 5px;
+}
+
+        /* Form */
+
+.page3-contact-form label {
+    font-family: 'Roboto';
+    font-size: 18px;
+}
+
+.page3-contact-form {
+    flex-direction: column;
+    height: 100%;
+    width: 60%;
+}
+
+.page3-contact-form > * {
+    margin-bottom: 2%;
+}
+
+.input-makeup:not(.form-submit-button) {
+    background-color: rgb(238, 238, 238);
+    border: 2px solid var(--c1);
+    border-radius: 5px;
+    height: 20px;
+    padding: 10px;
+}
+
+.input-makeup:focus:not(.form-submit-button) {
+    border: 2px solid var(--c2);
+    outline: none;
+}
+
+#comment {
+    height: auto;
+}
+
+            /* Button */
+            /* For rest of button styling see "Buttons" under "Home Page" */
+.form-submit-button {
+    align-self: end;
+    width: 140px;
+    flex-shrink: 0;
+    right: 0;
+}
+
+@media only screen and (max-width: 650px) {
+    .page3-contact-box {
+        flex-direction: column;
+        height: auto;
+    }
+    .page3-contact-info {
+        width: 100%;
+    }
+    .page3-contact-info h2 {margin-bottom: 20px;}
+    .page3-contact-info address > * {
+        margin-bottom: 20px;
+    }
+    .page3-contact-form input {
+        margin-bottom: 30px;
+    }
+    .page3-contact-form {
+        width: 100%;
+    }
+}
+
+
+
+/* Footer */
+
+
+
+.footer-background {background-color: var(--c1);    margin-top: 7%;}
+
+.foot-layout {
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+/* For Navigation Styling see Header > page.nav */
+
+@media only screen and (max-width: 900px) {
+
+    .home-over-ons, .home-contact {width: min(450px, 100%); margin: 0 auto;}
+    .home-over-ons  {flex-direction: column;        }
+    .home-contact   {flex-direction: column-reverse;}
+    .main-content-box div.img   {width: 100%;}
+
+}
+
+@media only screen and (max-width: 650px) {
+    
+    .foot-layout {
+        flex-direction: column-reverse;
+        justify-content: center;
+        height: 90px;
+        padding-bottom: 12px;
+    }
+
+}

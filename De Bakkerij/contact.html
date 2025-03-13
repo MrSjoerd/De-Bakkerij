@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header>
+        <div class="flex head-layout container">
+
+            <img class="head-logo" src="./Assets/Logo/logo_large.png" alt="Bakkerij Logo">
+
+            <div class="flex nav-box top">
+
+                <input type="checkbox" id="menu-toggle-top">
+                <label for="menu-toggle-top" class="menu-icon">&#9776;</label>
+
+                <nav class="page-nav top">
+                    <ul class="flex">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="over-ons.html">Over ons</a></li>
+                        <li><a href="contact.html" aria-current="page">Contact</a></li>
+                    </ul>
+                </nav>
+                
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="main-layout">
+
+            <!-- Page Cover -->
+            <section class="flex cover-box contact-page">
+                <h1 class="cover-title">Contact</h1>
+            </section>
+
+            <!-- Page Content -->
+            <section class="main-content-box container">
+                <div class="flex page3-contact-box">
+
+                    <!-- Hier kunt u ons vinden! -->
+                    <div class="page3-contact-info">
+                        <h2>Hier kunt u ons vinden!</h2>
+
+                        <address class="flex">
+
+                            <div>
+                            <p>Adres</p>
+                            <p class="small-p">Hollandsch Diep 61c<br>2904 EP, Capelle aan den IJssel</p>
+                            </div>
+
+                            <div>
+                                <p>Telefoonnummer</p>
+                                <p class="small-p">+31 612345678</p>
+                            </div>
+
+                            <div>
+                                <p>Email</p>
+                                <p class="small-p">info@bakkerij.nl</p>
+                            </div>
+
+                            <div>
+                                <p>Openingstijden</p>
+                                <!-- Week Opening Times -->
+                                <div class="grid contact-days-layout">
+                                    <p class="ma small-p">Maandag</p>
+                                    <p class="ma-status small-p">Gesloten</p>
+
+                                    <p class="di small-p">Dinsdag</p>
+                                    <p class="di-status small-p">8:00 - 17:00</p>
+
+                                    <p class="wo small-p">Woensdag</p>
+                                    <p class="wo-status small-p">8:00 - 17:00</p>
+
+                                    <p class="do small-p">Donderdag</p>
+                                    <p class="do-status small-p">8:00 - 17:00</p>
+
+                                    <p class="vr small-p">Vrijdag</p>
+                                    <p class="vr-status small-p">8:00 - 17:00</p>
+
+                                    <p class="za small-p">Zaterdag</p>
+                                    <p class="za-status small-p">8:00 - 17:00</p>
+
+                                    <p class="zo small-p">Zondag</p>
+                                    <p class="zo-status small-p">Gesloten</p>
+                                </div>
+                            </div>
+
+                        </address>
+                    </div>
+
+                    <!-- Form -->
+                    <form class="flex page3-contact-form">
+
+                        <label for="name">Naam</label>
+                        <input id="name" class="input-makeup" type="text" required>
+
+                        <label for="mail">Email adres</label>
+                        <input id="mail" class="input-makeup" type="email" required>
+
+                        <label for="tel">Telefoonnummer</label>
+                        <input id="tel" class="input-makeup" type="tel" required>
+
+                        <label for="comment">Bericht</label>
+                        <textarea id="comment" class="input-makeup" rows="10" cols="50" placeholder="Hoe kunnen wij u helpen?..." required></textarea>
+
+                        <input class="form-submit-button" type="submit" value="Verzenden">
+                    </form>
+
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-background">
+            <div class="flex foot-layout container">
+                <p>© 2021 - Bakkerij</p>
+
+                <div class="flex nav-box bottom">
+                    <!-- <input type="checkbox" id="menu-toggle-bottom">
+                    <label for="menu-toggle-bottom" class="menu-icon">&#9776;</label> -->
+
+                    <nav class="page-nav bottom">
+                        <ul class="flex">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="over-ons.html">Over ons</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
