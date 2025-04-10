@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
 </head>
 <body>
 
@@ -15,10 +16,13 @@
 
             <div class="flex nav-box top">
 
-                <input type="checkbox" id="menu-toggle-top">
-                <label for="menu-toggle-top" class="menu-icon">&#9776;</label>
+                <!-- Open burgermenu (icon) -->
+                <div id="menuIcon" class="menu-icon">&#9776;</div>
 
-                <nav class="page-nav top">
+                <!-- Cancel burgermenu (icon) -->
+                <div id="cancelIcon">x</div>
+
+                <nav id="navBox" class="page-nav top">
                     <ul class="flex">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="over-ons.html" aria-current="page">Over ons</a></li>

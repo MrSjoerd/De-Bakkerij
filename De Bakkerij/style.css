@@ -88,7 +88,6 @@ p           {font-family: 'Roboto', Arial, Helvetica, sans-serif; font-size: 18p
 
 
 /* Navigation Burgermenu */
-#menu-toggle-top, #menu-toggle-bottom {display: none;}
 .menu-icon {
     display: none;
     align-self: center;
@@ -99,29 +98,33 @@ p           {font-family: 'Roboto', Arial, Helvetica, sans-serif; font-size: 18p
 
 .menu-icon:hover {color: var(--c2);}
 
-/* Initially had footer burgermenu as well */
+/* Navigation cancel Burgermenu */
+#cancelIcon {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 15px;
+    font-size: 40px;
+    font-family: 'Roboto';
+}
+
+#cancelIcon:hover {
+    cursor: pointer;
+}
+
 @media only screen and (max-width: 650px) {
-    .nav-box.top    {flex-direction: column;            position: relative;}
-    /* .nav-box.bottom {flex-direction: column-reverse;    position: relative;} */
-    .menu-icon {
-        display: block;
+    .head-layout {
+        align-items: center;
     }
-    /* Initially no ".top" */
-    .page-nav.top {
-        height: 0;
-        width: 100px;
-        overflow: hidden;
-        position: absolute;
-        transition: height 0.4s ease-in-out;
+    .nav-box.top    {
+        text-align: center;
     }
-    .page-nav.top       {top: 50px; right: 0px;}
-    /* .page-nav.bottom    {bottom: 50px; right: 0px;} */
-    /* Initially no ".top" */
-    .page-nav.top ul {flex-direction: column;}
-    .page-nav.top ul    {background-color: var(--c4);}
-    /* .page-nav.bottom ul {background-color: var(--c1);} */
-    #menu-toggle-top:checked ~ .page-nav.top        {height: 150px;}
-    /* #menu-toggle-bottom:checked ~ .page-nav.bottom  {height: 150px;} */
+    .menu-icon      {display: block;}
+    .page-nav.top   {
+        display: none;
+        z-index: 1000;
+    }
+    .page-nav.top ul    {flex-direction: column;}
 }
 
 
