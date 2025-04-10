@@ -21,11 +21,11 @@ address {all: unset;}
 }
 
 /* Fonts */
-h1, h2, h3  {font-family: 'Lato', Arial, Helvetica, sans-serif;}
+h1, h2, h3  {font-family: 'Lato';}
 h1 {font-size: 80px;    line-height: 1.05;}
 h2 {font-size: 30px;    line-height: 1.1;}
 h3 {font-size: 24px;    line-height: 1.1;}
-p           {font-family: 'Roboto', Arial, Helvetica, sans-serif; font-size: 18px; line-height: 1.6;}
+p           {font-family: 'Roboto'; font-size: 18px; line-height: 1.6;}
 /* Small paragraph */
 .small-p    {font-size: 14px;   line-height: 1.6;}
 
@@ -357,12 +357,18 @@ button:hover, .form-submit-button:hover {
     height: auto;
 }
 
+            /* Formalerts */
+.formAlert {
+    font-size: 15px;
+    color: red;
+    font-style: italic;
+}
+
             /* Button */
             /* For rest of button styling see "Buttons" under "Home Page" */
 .form-submit-button {
     align-self: end;
     width: 140px;
-    flex-shrink: 0;
     right: 0;
 }
 
@@ -404,10 +410,9 @@ button:hover, .form-submit-button:hover {
 
 @media only screen and (max-width: 900px) {
 
-    .home-over-ons, .home-contact {width: min(450px, 100%); margin: 0 auto;}
+    .home-over-ons, .home-contact {width: 450px; margin: 0 auto;}
     .home-over-ons  {flex-direction: column;        }
     .home-contact   {flex-direction: column-reverse;}
-    .main-content-box div.img   {width: 100%;}
 
 }
 
